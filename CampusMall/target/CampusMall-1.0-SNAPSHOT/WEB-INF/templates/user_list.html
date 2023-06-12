@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="6">Employee Info</th>
+    </tr>
+    <tr>
+        <th>tu_id</th>
+        <th>user_id</th>
+        <th>user_name</th>
+        <th>user_password</th>
+        <th>user_email</th>
+        <th>user_phone</th>
+        <th>user_address</th>
+        <th>user_gender</th>
+    </tr>
+    <tr th:each="list : ${list}">
+        <td th:text="${list.tuId}"></td>
+        <td th:text="${list.userId}"></td>
+        <td th:text="${list.userName}"></td>
+        <td th:text="${list.userPassword}"></td>
+        <td th:text="${list.userEmail}"></td>
+        <td th:text="${list.userPhone}"></td>
+        <td th:text="${list.userAddress}"></td>
+        <td th:text="${list.userGender}"></td>
+        <td>
+            <a href="">delete</a>
+            <a href="">update</a>
+        </td>
+    </tr>
+    <tr>
+</table>
+</body>
+</html>
